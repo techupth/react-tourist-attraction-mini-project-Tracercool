@@ -36,13 +36,13 @@ function TripGuide(props) {
           src={props.extraPhoto}
           css={css`
             display: inline;
-            width: 250px;
+            width: 300px;
             height: 200px;
             border-radius: 30px;
           `}
         ></img>
       </section>
-      <section
+      <section 
         className="details"
         css={css`
           display: flex;
@@ -64,7 +64,7 @@ function TripGuide(props) {
         <p
           css={css`
             margin: 0px;
-            font-size: 15px;
+            font-size: 13px;
             color: #838383;
             font-family: "Prompt";
           `}
@@ -76,7 +76,7 @@ function TripGuide(props) {
           target="_blank"
           css={css`
             margin: 0px;
-            font-size: 15px;
+            font-size: 13px;
             color: #00ccff;
             width: 50px;
             font-family: "Prompt";
@@ -103,7 +103,7 @@ function TripGuide(props) {
           {props.tag.map((item, index, array) => {
             return index == array.length - 1 ? (
               <>
-                <spa
+                <span
                   css={css`
                     margin: 0px;
                     font-size: 13px;
@@ -112,7 +112,7 @@ function TripGuide(props) {
                   `}
                 >
                   และ
-                </spa>
+                </span>
                 <a
                   key={index}
                   css={css`

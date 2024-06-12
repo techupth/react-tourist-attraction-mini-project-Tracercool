@@ -53,6 +53,7 @@ function App() {
             display: flex;
             width: 80vw;
             margin-left: 25vw;
+            margin-top: -10px;
           `}
         >
           ค้นหาที่เที่ยว
@@ -62,7 +63,7 @@ function App() {
           css={css`
             display: flex;
             justify-content: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
           `}
         >
           <input
@@ -70,19 +71,24 @@ function App() {
             placeholder="หาที่เที่ยวแล้วไปกัน .."
             value={searchText}
             css={css`
+              font-family: "Prompt";
+              font-size: 13px;
+              margin-top: 20px;
               border: none;
               &::placeholder {
                 color: #318ce7;
-            }
+              }
               &:focus {
                 outline: 0px;
-              }
+               
             `}
           ></input>
         </div>
 
         <hr
           css={css`
+            margin-bottom: 10px;
+            margin-top: -3px;
             width: 50vw;
             color: black;
           `}
