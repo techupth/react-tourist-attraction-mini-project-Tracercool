@@ -165,6 +165,27 @@ function TripGuide(props) {
             );
           })}
         </div>
+        <button
+          onClick={() => props.onCopyLink(props.url)} 
+          css={css`
+            width: 10vw;
+            height: 10vh;
+            margin-top: -80px;
+            margin-left: 500px;
+            padding: 20px 20px;
+            font-size: 15px;
+            color: white;
+            background-color: #318ce7;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            &:hover {
+              background-color: #2577b5;
+            }
+          `}
+        >
+          Copy Link!!
+        </button>
       </section>
     </div>
   );

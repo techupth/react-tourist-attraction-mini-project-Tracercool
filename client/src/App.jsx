@@ -26,6 +26,15 @@ function App() {
     getDataTripGuide(searchText);
   }, [searchText]);
 
+  const copyToClipBoard = async (url) => {
+    try {
+      await navigator.clipboard.writeText(url);
+      alert("ลิ้งค์ถูกคัดลอกแล้ว!");
+    } catch (err) {
+      console.error("Could not copy text: ", err);
+    }
+  };
+
   return (
     <div className="App">
       <div
@@ -111,11 +120,15 @@ function App() {
               url={item.url}
               tag={item.tags}
               photos={item.photos.slice(1)}
+              onCopyLink={() => copyToClipBoard(item.url)}
             />
           );
         })}
       </section>
     </div>
+
+    
+  
   );
 }
 
